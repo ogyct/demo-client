@@ -1,0 +1,24 @@
+server:
+  port: 9443
+  ssl:
+    key-store: classpath:server.p12
+    key-store-password: Secr3t
+    key-store-type: pkcs12
+    key-store-alias: https
+logging.level.org.springframework: debug
+
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            provider: google
+            client-id: 738987956532-02skqsb8cf452j0uhlfcn9g4jh1a9m9r.apps.googleusercontent.com
+            client-secret: DUpwark2vVdZx7n473S3I9dl
+            scope:
+              - openid
+              - email
+          provider:
+            google:
+              issuer-uri: https://accounts.google.com
